@@ -1135,9 +1135,8 @@ class VisualizationApplication(ApplicationMixin):
 
         coordinates = self.solver.coordinates
         
-        tmp = 'coordinates.txt'
-        logger.warning("save txt to `%s`" % tmp)
-        np.savetxt(tmp, coordinates)
+        print("save coordinates" )
+        np.savetxt('coordinates.txt', coordinates)
         
         dim = coordinates.shape[1]
         if not (dim == 2 or dim == 3):
